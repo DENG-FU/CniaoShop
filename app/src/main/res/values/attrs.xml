@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--一些属性集合，通过TintTypedArray.obtainStyledAttributes()函数可以获得其中的值，
+在某个xml文件中要设置其中的值事，需声明一下自定义属性：xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <declare-styleable name="CNiaoToolBar">
+        <attr name="rightButtonIcon" format="reference"/>
+        <attr name="isShowSearchView" format="boolean"/>
+        <attr name="rightButtonText" format="string"/>
+    </declare-styleable>
+
+</resources>

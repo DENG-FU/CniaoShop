@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "cniao5shop.com.cniao5.cniaoshop"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    //短信验证
+    compile name:'SMSSDK-2.1.1',ext:'aar'
+    compile name:'SMSSDKGUI-2.1.1',ext:'aar'
+
+
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    //图库缓存
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //用于顶栏广告图片的切换
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //OkHttp用于联网操作
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    //Gson用于Json数据格式的转换
+    compile 'com.google.code.gson:gson:2.6.2'
+    //开源库，过度进度条
+    compile 'com.github.d-max:spots-dialog:0.4@aar'
+    //CardView继承自FrameView添加了一些圆角阴影等效果
+    compile 'com.android.support:cardview-v7:23.0.1'
+    //RecyclerView
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    //提供另一种形式寻找资源
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    //下拉刷新
+    compile 'com.cjj.materialrefeshlayout:library:1.3.0'
+    //TabLayout需要的依赖
+    compile 'com.android.support:design:23.0.1'
+    //图片缓存库
+    compile 'com.facebook.fresco:fresco:0.6.0+'
+    compile 'com.facebook.fresco:imagepipeline-okhttp:0.6.0+'
+
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+
+}
